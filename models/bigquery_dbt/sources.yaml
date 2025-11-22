@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: bigquery_dbt
+    description: "Raw input tables for the bigquery_dbt project."
+    database: micro-dynamo-472018-d2
+    schema: bigquery_dbt
+
+    tables:
+      - name: raw_customers
+        description: "Raw customers data loaded into BigQuery (e.g. from CSV)."
