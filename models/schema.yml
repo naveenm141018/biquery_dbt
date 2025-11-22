@@ -36,7 +36,7 @@ models:
       - name: website
         description: "Customer's website URL, if available."
 
-  - name: japan_customers
+  - name: v_japan_customers
     description: "View of customers filtered to those whose country is Japan."
     columns:
       - name: customer_id
