@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: customers
+    description: "Customer table built from raw_customers with cleaned and standardized fields."
+    columns:
+      - name: index
+        description: "Row index from the source file."
+
+      - name: customer_id
+        description: "Unique identifier of the customer."
+        tests:
+          - not_null
+
+      - name: name
+        description: "Full name of the customer (first name + last name)."
+
+      - name: company
+        description: "Customer's company or organization name."
+
+      - name: city
+        description: "City where the customer is located."
+
+      - name: country
+        description: "Country where the customer is located."
+
+      - name: phone_no
+        description: "Primary phone number of the customer."
+
+      - name: email
+        description: "Email address of the customer."
+
+      - name: subscription_date
+        description: "Date when the customer subscribed or registered."
+
+      - name: website
+        description: "Customer's website URL, if available."
+
+  - name: japan_customers
+    description: "View of customers filtered to those whose country is Japan."
+    columns:
+      - name: customer_id
+        description: "Unique identifier of the customer."
+
+      - name: country
+        description: "Customer's country (always 'Japan' in this view)."
